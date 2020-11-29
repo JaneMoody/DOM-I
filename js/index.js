@@ -43,24 +43,68 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+//<--- ALL IMG's --->
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-// let topNav = document.querySelectorAll(".container header nav a");
-let topNav = document.querySelectorAll(".container header nav a");
+let ctaImg = document.querySelector("#cta-img");
+ctaImg.src = siteContent["cta"]["img-src"];
 
-Array.from(topNav).forEach(function (navagtion) {
-  (navagtion.textContent = "Services"),
-    (navagtion.textContent += "Product"),
-    (navagtion.textContent += "Vision"),
-    (navagtion.textContent = "Features"),
-    (navagtion.textContent = "About"),
-    (navagtion.textContent = "Contact");
-});
+let middleImg = document.querySelector(".middle-img");
+middleImg.src = siteContent["main-content"]["middle-img-src"];
 
-// const navAdd = document.querySelector("nav");
-// navAdd.innerHTML += "Product";
-// navAdd.innerHTML += <a href="#">Vision</a>;
-// navAdd.innerHTML += <a href="#">Features</a>;
-// navAdd.innerHTML += <a href="#">About</a>;
-// navAdd.innerHTML += <a href="#">Contact</a>;
+//<--- Tranversed to the nav and changed the text for each child. ---->
+let navLinks = document.getElementsByTagName("a");
+
+navLinks[0].textContent = siteContent["nav"]["nav-item-1"];
+navLinks[1].textContent = siteContent["nav"]["nav-item-2"];
+navLinks[2].textContent = siteContent["nav"]["nav-item-3"];
+navLinks[3].textContent = siteContent["nav"]["nav-item-4"];
+navLinks[4].textContent = siteContent["nav"]["nav-item-5"];
+navLinks[5].textContent = siteContent["nav"]["nav-item-6"];
+
+//<--- ALL H1's --->
+let ctaH1 = document.querySelector("h1");
+ctaH1.textContent = siteContent["cta"]["h1"];
+
+//<--- ALL H4's --->
+let allH4 = document.getElementsByTagName(".text-content h4");
+
+allH4[0].textContent = siteContent["cta"]["features-h4"];
+allH4[1].textContent = siteContent["cta"]["about-h4"];
+allH4[2].textContent = siteContent["cta"]["services-h4"];
+allH4[3].textContent = siteContent["cta"]["product-h4"];
+allH4[4].textContent = siteContent["cta"]["vision-h4"];
+
+// <--- ALL BUTTONS --->
+let ctaButton = document.getElementByTagName(".cta-text button");
+ctaButton.textContent = siteContent["cta"]["button"];
+
+// <--- ALL P's ---->
+let allP = document.getElementsByTagName(".text-content p");
+
+allP[0].textContent = siteContent["cta"]["features-content"];
+allP[1].textContent = siteContent["cta"]["about-content"];
+allP[2].textContent = siteContent["cta"]["product-content"];
+allP[3].textContent = siteContent["cta"]["vision-content"];
+
+//<--- CONTACT SECTION --->
+
+let contactH4 = document.querySelector(".contact h4");
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+
+let contactP = document.querySelectorAll(".contact p");
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+
+// <--- FOOTER --->
+
+let footerP = document.querySelector("footer p");
+footerP.textContent = siteContent["footer"]["copyright"];
+
+//<--- CHANGED THE TEXT COLOR TO GREEN IN NAV --->
+
+let navColor = document.querySelectorAll(".container");
+navColor.style.color += "green";
