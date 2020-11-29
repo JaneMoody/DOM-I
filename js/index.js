@@ -55,7 +55,7 @@ let middleImg = document.querySelector(".middle-img");
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
 //<--- Tranversed to the nav and changed the text for each child. ---->
-let navLinks = document.getElementsByTagName("a");
+let navLinks = document.querySelectorAll("nav a");
 
 navLinks[0].textContent = siteContent["nav"]["nav-item-1"];
 navLinks[1].textContent = siteContent["nav"]["nav-item-2"];
@@ -64,6 +64,13 @@ navLinks[3].textContent = siteContent["nav"]["nav-item-4"];
 navLinks[4].textContent = siteContent["nav"]["nav-item-5"];
 navLinks[5].textContent = siteContent["nav"]["nav-item-6"];
 
+// const navLinks = document.querySelectorAll('nav a');
+// navLinks[0].textContent = 'Services';
+// navLinks[1].textContent = 'Product';
+// navLinks[2].textContent = 'Vision';
+// navLinks[3].textContent = 'Feature';
+// navLinks[4].textContent = 'About';
+// navLinks[5].textContent = 'Contact';
 //<--- ALL H1's --->
 let ctaH1 = document.querySelector("h1");
 ctaH1.textContent = siteContent["cta"]["h1"];
@@ -105,6 +112,7 @@ let footerP = document.querySelector("footer p");
 footerP.textContent = siteContent["footer"]["copyright"];
 
 //<--- CHANGED THE TEXT COLOR TO GREEN IN NAV --->
+let navColor = (document.querySelector("a").style.color = "green");
 
-let navColor = document.querySelectorAll(".container");
-navColor.style.color += "green";
+// let navColor = document.querySelectorAll(".container");
+// navColor.style.color += "green";
