@@ -44,7 +44,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 
-//<--- ALL IMG's --->
+//<---  ALL IMG's  --->
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
@@ -54,47 +54,69 @@ ctaImg.src = siteContent["cta"]["img-src"];
 let middleImg = document.querySelector(".middle-img");
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
-//<--- Tranversed to the nav and changed the text for each child. ---->
-let navLinks = document.querySelectorAll("nav a");
+//<---  HEADER NAV  ---->
+let headerNav = document.querySelectorAll("nav a");
 
-navLinks[0].textContent = siteContent["nav"]["nav-item-1"];
-navLinks[1].textContent = siteContent["nav"]["nav-item-2"];
-navLinks[2].textContent = siteContent["nav"]["nav-item-3"];
-navLinks[3].textContent = siteContent["nav"]["nav-item-4"];
-navLinks[4].textContent = siteContent["nav"]["nav-item-5"];
-navLinks[5].textContent = siteContent["nav"]["nav-item-6"];
+headerNav[0].textContent = siteContent["nav"]["nav-item-1"];
+headerNav[1].textContent = siteContent["nav"]["nav-item-2"];
+headerNav[2].textContent = siteContent["nav"]["nav-item-3"];
+headerNav[3].textContent = siteContent["nav"]["nav-item-4"];
+headerNav[4].textContent = siteContent["nav"]["nav-item-5"];
+headerNav[5].textContent = siteContent["nav"]["nav-item-6"];
 
-// const navLinks = document.querySelectorAll('nav a');
-// navLinks[0].textContent = 'Services';
-// navLinks[1].textContent = 'Product';
-// navLinks[2].textContent = 'Vision';
-// navLinks[3].textContent = 'Feature';
-// navLinks[4].textContent = 'About';
-// navLinks[5].textContent = 'Contact';
-//<--- ALL H1's --->
+//<---  CTA H1 & BUTTON  --->
 let ctaH1 = document.querySelector("h1");
-ctaH1.textContent = siteContent["cta"]["h1"];
+ctaH1.innerHTML = siteContent["cta"]["h1"];
 
-//<--- ALL H4's --->
-let allH4 = document.getElementsByTagName(".text-content h4");
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.innerText = siteContent["cta"]["button"];
 
-allH4[0].textContent = siteContent["cta"]["features-h4"];
-allH4[1].textContent = siteContent["cta"]["about-h4"];
-allH4[2].textContent = siteContent["cta"]["services-h4"];
-allH4[3].textContent = siteContent["cta"]["product-h4"];
-allH4[4].textContent = siteContent["cta"]["vision-h4"];
+//<--- ALL FEATURE CONTENT --->
+let featureH4 = document.querySelector(".text-content:nth-of-type(1) h4");
+featureH4.innerText = siteContent["main-content"]["features-h4"];
 
-// <--- ALL BUTTONS --->
-let ctaButton = document.getElementByTagName(".cta-text button");
-ctaButton.textContent = siteContent["cta"]["button"];
+let featureP = document.querySelector(".text-content:nth-of-type(1) p");
+featureP.innerText = siteContent["main-content"]["features-content"];
 
-// <--- ALL P's ---->
-let allP = document.getElementsByTagName(".text-content p");
+//<--- ALL ABOUT CONTENT --->
+let aboutH4 = document.querySelector(".text-content:nth-of-type(2) h4");
+aboutH4.innerText = siteContent["main-content"]["about-h4"];
 
-allP[0].textContent = siteContent["cta"]["features-content"];
-allP[1].textContent = siteContent["cta"]["about-content"];
-allP[2].textContent = siteContent["cta"]["product-content"];
-allP[3].textContent = siteContent["cta"]["vision-content"];
+let aboutP = document.querySelector(".text-content:nth-of-type(2) p");
+aboutP.innerText = siteContent["main-content"]["about-content"];
+
+//<--- ALL SERVICE CONTENT --->
+let serviceH4 = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(1) h4"
+);
+serviceH4.innerText = siteContent["main-content"]["services-h4"];
+
+let serviceP = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(1) p"
+);
+serviceP.innerText = siteContent["main-content"]["services-content"];
+
+//<--- ALL PRODUCT CONTENT --->
+let productH4 = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(2) h4"
+);
+productH4.innerText = siteContent["main-content"]["product-h4"];
+
+let productP = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(2) p"
+);
+productP.innerText = siteContent["main-content"]["product-content"];
+
+//<--- ALL VISION CONTENT --->
+let visionH4 = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(3) h4"
+);
+visionH4.innerText = siteContent["main-content"]["vision-h4"];
+
+let visionP = document.querySelector(
+  ".bottom-content .text-content:nth-of-type(3) p"
+);
+visionP.innerText = siteContent["main-content"]["vision-content"];
 
 //<--- CONTACT SECTION --->
 
@@ -112,7 +134,7 @@ let footerP = document.querySelector("footer p");
 footerP.textContent = siteContent["footer"]["copyright"];
 
 //<--- CHANGED THE TEXT COLOR TO GREEN IN NAV --->
-let navColor = (document.querySelector("a").style.color = "green");
+// let navColor = (document.querySelector("a").style.color = "green");
 
-// let navColor = document.querySelectorAll(".container");
-// navColor.style.color += "green";
+let navColor = document.querySelectorAll("nav a");
+navColor.style.color += "green";
