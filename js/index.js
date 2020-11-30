@@ -70,6 +70,9 @@ ctaH1.innerHTML = siteContent["cta"]["h1"];
 
 let ctaButton = document.querySelector(".cta-text button");
 ctaButton.innerText = siteContent["cta"]["button"];
+// <--- STRETCH --->
+ctaButton.style.color = "red";
+ctaButton.style.backgroundColor = "black";
 
 //<--- ALL FEATURE CONTENT --->
 let featureH4 = document.querySelector(".text-content:nth-of-type(1) h4");
