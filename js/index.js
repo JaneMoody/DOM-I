@@ -134,7 +134,6 @@ let footerP = document.querySelector("footer p");
 footerP.textContent = siteContent["footer"]["copyright"];
 
 //<--- CHANGED THE TEXT COLOR TO GREEN IN NAV --->
-// let navColor = (document.querySelector("a").style.color = "green");
 
-let navColor = document.querySelectorAll("nav a");
-navColor.style.color += "green";
+headerNav.style.color = "green";
+headerNav[0].style.color = "green";
