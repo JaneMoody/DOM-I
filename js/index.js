@@ -133,7 +133,25 @@ contactP[2].textContent = siteContent["contact"]["email"];
 let footerP = document.querySelector("footer p");
 footerP.textContent = siteContent["footer"]["copyright"];
 
-//<--- CHANGED THE TEXT COLOR TO GREEN IN NAV --->
+//<--- TRYING TO CHANGE THE TEXT COLOR TO GREEN IN NAV --->
 
-headerNav.style.color = "green";
 headerNav[0].style.color = "green";
+headerNav[1].style.color = "green";
+headerNav[2].style.color = "green";
+headerNav[3].style.color = "green";
+headerNav[4].style.color = "green";
+headerNav[5].style.color = "green";
+
+//<--- Adding 2 New links to nav & changed the text color to green --->
+
+const newLink2 = document.createElement("a");
+newLink2.textContent = "Other Link";
+newLink2.href = "#";
+document.querySelector("nav").prepend(newLink2);
+newLink2.style.color = "green";
+
+const newLink = document.createElement("a");
+newLink.textContent = "New Link";
+newLink.href = "#";
+document.querySelector("nav").appendChild(newLink);
+newLink.style.color = "green";
